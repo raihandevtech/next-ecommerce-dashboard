@@ -1,0 +1,43 @@
+._earning_card{
+    &_section{
+        background-color: $bg1;
+        padding: 15px 15px;
+
+    }
+    &_top{
+        @include flex(center, space-between);
+    }
+    &_title{
+        font-family: "Open Sans";
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 1.2;
+          color: $secondary1;
+    }
+    &_content{
+        text-align: center;
+        padding: 10px 0;
+    }
+    &_total{
+        font-family: "Open Sans";
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 1.2;
+        color: $secondary1;
+        margin-bottom: 8px;
+    }
+    &_delta{
+        @include flex(center, center);
+        margin-bottom: 5px;
+        font-size: 16px;
+        ._delta_derection{
+            font-size: 15px;
+        }
+
+    }
+    &_caption{
+        font-size: 13px;
+        color: $primary1;
+    }
+
+}

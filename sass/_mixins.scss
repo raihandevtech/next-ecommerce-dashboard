@@ -1,0 +1,69 @@
+// flex box
+
+@mixin flex($align-item, $justify-content) {
+  display: flex;
+  align-items: $align-item;
+  justify-content: $justify-content;
+}
+@mixin flex-align($align-item) {
+  display: flex;
+  align-items: $align-item;
+}
+
+// minimum screen
+
+@mixin min-small {
+  @media only screen and (min-width: $min-small-screen) {
+    @content;
+  }
+}
+@mixin min-medium {
+  @media only screen and (min-width: $min-medium-screen) {
+    @content;
+  }
+}
+@mixin min-large {
+  @media only screen and (min-width: $min-large-screen) {
+    @content;
+  }
+}
+@mixin min-extra-large {
+  @media only screen and (min-width: $min-extra-large-screen) {
+    @content;
+  }
+}
+
+@mixin min-2extra-large {
+  @media only screen and (min-width: $min-2extra-large-screen) {
+    @content;
+  }
+}
+
+// maximum screen
+
+@mixin max-extra-small {
+  @media only screen and (max-width: $max-extra-small-screen) {
+    @content;
+  }
+}
+@mixin max-small {
+  @media only screen and (max-width: $max-small-screen) {
+    @content;
+  }
+}
+@mixin max-medium {
+  @media only screen and (max-width: $max-medium-screen) {
+    @content;
+  }
+}
+@mixin max-large {
+  @media only screen and (max-width: $max-large-screen) {
+    @content;
+  }
+}
+
+@mixin max-extra-large {
+  @media only screen and (max-width: $max-extra-large-screen) {
+    @content;
+  }
+}

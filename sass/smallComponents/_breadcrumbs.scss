@@ -1,0 +1,41 @@
+._breadcrumbs {
+  &_wrap {
+    ._page_title {
+      font-family: "Open Sans";
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 1.2;
+      color: $secondary7;
+      margin-bottom: 4px;
+    }
+  }
+  &_dir {
+    @include flex-align(center);
+  }
+  &_item {
+    margin-right: 20px;
+    position: relative;
+    font-family: "Open Sans";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $secondary3;
+    &::after {
+      position: absolute;
+      content: "/";
+      top: 50%;
+      transform: translateY(-50%);
+      right: -12px;
+      font-family: "Open Sans";
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.2;
+      color: $primary2;
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

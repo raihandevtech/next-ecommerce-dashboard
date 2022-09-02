@@ -1,0 +1,22 @@
+._button{
+    height: 38px;
+    padding: 0 19px;
+    @include flex(center, center);
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $secondary7;
+    text-transform: uppercase;
+    background-color: $secondary5;
+    transition: all .2s ease;
+    &:hover{
+        background-color: $secondary4;
+    }
+}
+._button._primary{
+    background-color: $primary2;
+    &:hover{
+        background-color: $secondary4;
+    }
+}

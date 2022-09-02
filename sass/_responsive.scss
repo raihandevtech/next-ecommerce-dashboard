@@ -1,0 +1,327 @@
+  *, ::after, ::before {
+    box-sizing: border-box;
+  }
+
+// ....... Grid ........
+
+ .grid {
+    display: grid;
+  }
+  
+  @each $val in $numbers {
+    .grid-col-sm-#{$val} {
+      @include min-small {
+        grid-template-columns: repeat($val, 1fr);
+      }
+    }
+  }
+  
+  @each $val in $numbers {
+    .grid-col-md-#{$val} {
+      @include min-medium {
+        grid-template-columns: repeat($val, 1fr);
+      }
+    }
+  }
+  
+  @each $val in $numbers {
+    .grid-col-lg-#{$val} {
+      @include min-large {
+        grid-template-columns: repeat($val, 1fr);
+      }
+    }
+  }
+  
+  @each $val in $numbers {
+    .grid-col-xl-#{$val} {
+      @include min-extra-large {
+        grid-template-columns: repeat($val, 1fr);
+      }
+    }
+  }
+  @each $val in $numbers {
+    .grid-col-2xl-#{$val} {
+      @include min-2extra-large {
+        grid-template-columns: repeat($val, 1fr);
+      }
+    }
+  }
+
+  // ....... Flex ........
+
+  // row
+
+  .row {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(var(--bs-gutter-y) * -1);
+      margin-right: calc(var(--bs-gutter-x) / -2);
+      margin-left: calc(var(--bs-gutter-x) / -2);
+  }
+  .row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-top: var(--bs-gutter-y);
+  }
+
+//  column
+
+  @each $val in $numbers {
+    .col-sm-#{$val} {
+      @include min-small {
+        flex: 0 0 auto;
+        width: 100% / 12 * $val;
+      }
+    }
+  }
+  
+  @each $val in $numbers {
+    .col-md-#{$val} {
+      @include min-medium {
+        flex: 0 0 auto;
+        width: 100% / 12 * $val;
+      }
+    }
+  }
+  
+  @each $val in $numbers {
+    .col-lg-#{$val} {
+      @include min-large {
+        flex: 0 0 auto;
+        width: 100% / 12 * $val;
+      }
+    }
+  }
+  
+  @each $val in $numbers {
+    .col-xl-#{$val} {
+      @include min-extra-large {
+        flex: 0 0 auto;
+        width: 100% / 12 * $val;
+      }
+    }
+  }
+  @each $val in $numbers {
+    .col-2xl-#{$val} {
+      @include min-2extra-large {
+        flex: 0 0 auto;
+        width: 100% / 12 * $val;
+      }
+    }
+  }
+
+  @each $val in $numbers {
+    .col-xs-#{$val} {
+      @include max-extra-small {
+        flex: 0 0 auto;
+        width: 100% / 12 * $val;
+      }
+    }
+  }
+  
+
+  @media only screen and (max-width: 375px) {
+    .col-full-375{
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 420px) {
+    .col-full-420{
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  }
+
+ // offset 
+
+ .offset-sm-0 {
+  @include min-small {
+    margin-left: 0;
+  }
+}
+
+  .offset-md-0 {
+    @include min-medium {
+      margin-left: 0;
+    }
+  }
+
+  .offset-lg-0 {
+    @include min-large {
+      margin-left: 0;
+    }
+  }
+
+  .offset-xl-0 {
+    @include min-extra-large {
+      margin-left: 0;
+    }
+  }
+
+  .offset-2xl-0{
+    @include min-2extra-large {
+      margin-left: 0;
+    }
+  }
+
+
+
+  @each $val in $numbers {
+    .offset-sm-#{$val} {
+      @include min-small {
+        margin-left: 100% / 12 * $val;
+      }
+    }
+  }
+  
+  @each $val in $numbers {
+    .offset-md-#{$val} {
+      @include min-medium {
+        margin-left: 100% / 12 * $val;
+      }
+    }
+  }
+  
+  @each $val in $numbers {
+    .offset-lg-#{$val} {
+      @include min-large {
+        margin-left: 100% / 12 * $val;
+      }
+    }
+  }
+  
+  @each $val in $numbers {
+    .offset-xl-#{$val} {
+      @include min-extra-large {
+        margin-left: 100% / 12 * $val;
+      }
+    }
+  }
+  @each $val in $numbers {
+    .offset-2xl-#{$val} {
+      @include min-2extra-large {
+        margin-left: 100% / 12 * $val;
+      }
+    }
+  }
+
+ // order
+
+  .order-first {
+    order: -1 !important;
+  }
+  @for $i from 0 through 5 {
+    .order-#{$i} {order: $i !important}
+  }
+  .order-last {
+    order: 6 !important;
+  }
+
+  @include min-small {
+    .order-sm-first {
+      order: -1 !important;
+    }
+    @for $i from 0 through 5 {
+      .order-sm-#{$i} {order: $i !important}
+    }
+    .order-sm-last {
+      order: 6 !important;
+    }
+  }
+  @include min-medium {
+    .order-md-first {
+      order: -1 !important;
+    }
+    @for $i from 0 through 5 {
+      .order-md-#{$i} {order: $i !important}
+    }
+    .order-md-last {
+      order: 6 !important;
+    }
+  }
+  @include min-large {
+    .order-lg-first {
+      order: -1 !important;
+    }
+    @for $i from 0 through 5 {
+      .order-lg-#{$i} {order: $i !important}
+    }
+    .order-lg-last {
+      order: 6 !important;
+    }
+  }
+  @include min-extra-large {
+    .order-xl-first {
+      order: -1 !important;
+    }
+    @for $i from 0 through 5 {
+      .order-xl-#{$i} {order: $i !important}
+    }
+    .order-xl-last {
+      order: 6 !important;
+    }
+  }
+  @include min-2extra-large {
+    .order-2xl-first {
+      order: -1 !important;
+    }
+    @for $i from 0 through 5 {
+      .order-2xl-#{$i} {order: $i !important}
+    }
+    .order-2xl-last {
+      order: 6 !important;
+    }
+  }
+  
+  // ....... Container .......  
+
+  @media only screen and (max-width: 575px) {
+    .container {
+      padding: 0 20px;
+    }
+    .col-full-575{
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  }
+  
+  @include min-small {
+    .container {
+      max-width: 540px !important;
+    }
+  }
+  @include min-medium {
+    .container {
+      max-width: 720px !important;
+    }
+  }
+  @include min-large {
+    .container {
+      max-width: 960px !important;
+    }
+  }
+  @include min-extra-large {
+    .container {
+      max-width: 1170px !important;
+    }
+  }
+  @include min-2extra-large {
+    .container {
+      max-width: 1320px !important;
+    }
+  }
+  
+  .container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  
+  }
+ 
+  

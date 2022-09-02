@@ -1,0 +1,46 @@
+._date {
+    margin-right: 20px;
+    &_current {
+      background-color: $bg3;
+      width: 160px;
+      height: 38px;
+      @include flex-align(center);
+      cursor: pointer;
+      padding: 0 15px;
+      font-family: "Open Sans";
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.2;
+      color: $secondary1;
+      position: relative;
+      ._arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+        right: 10px;
+      }
+    }
+    &_select_wrap {
+      position: absolute;
+      width: 160px;
+      background-color: $bg4;
+      font-family: "Open Sans";
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.2;
+      color: $secondary1;
+      padding: 10px 0;
+      display: none;
+    }
+    &_select_wrap._open {
+      display: block;
+    }
+    &_select_item {
+      padding: 6px 20px;
+      cursor: pointer;
+      &:hover {
+        background-color: $primary2;
+      }
+    }
+  }

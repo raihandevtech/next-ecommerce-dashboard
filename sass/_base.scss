@@ -1,0 +1,92 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  padding: 0px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+body {
+  margin: 0px auto;
+  padding: 0px;
+  overflow-x: hidden;
+  font-family: "Open Sans";
+  font-weight: 500;
+  line-height: 1.2;
+  color: $secondary1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  line-height: 1.2;
+  color: $secondary1;
+}
+
+ul {
+  padding: 0;
+  margin: 0px;
+  list-style: none;
+}
+
+textarea {
+  resize: none !important;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  -webkit-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+._rice_heading_title {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.2;
+  text-align: center;
+  color: $secondary7;
+  margin-bottom: 50px;
+}
+
+@include max-extra-small {
+  ._rice_heading_title {
+    font-size: 32px;
+  }
+}

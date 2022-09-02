@@ -1,0 +1,62 @@
+// color
+  /* primary */
+  $primary1: #045db6;
+  $primary2: #ffcd2c;
+  /* secondary */
+  $secondary1: #011121;
+  $secondary2: #5ece3e;
+  $secondary3: #30cbf1;
+  $secondary4: #ff7c22;
+  $secondary5: #bfccda;
+  $secondary6: #bcc7d2;
+  $secondary7: #0b3763f8;
+  $secondary8: #969da5;
+  $secondary9: #afb7be;
+  $secondary10: #04203b;
+  /* white */
+  $white: #ffffff;
+  /* bg */
+  $bg1: #e5f7e0;
+  $bg2: #d7f5fc;
+  $bg3: #e1f0ff;
+  $bg4: #d6e7f8;
+  $bg5: #c5ccd2;
+  $bg6: #f7fbff;
+  $bg7: #e7f3ff;
+  $bg8: #ffe5d4;
+  $bg9: #fff4d0;
+  /* border */
+  $border1: #2d73ba80;
+  $border2: #e5e9ed;
+  $border3: #384048;
+  /* trans */
+  $trans1: rgba(4, 93, 182, 0.898);
+  /* shadow */
+  $shadow1: 0px 18px 56px rgba(0, 0, 0, 0.05);
+  $shadow2: 0px 10px 40px rgba(0, 0, 0, 0.05);
+  $shadow3: 0px -28px 42px rgb(0 0 0 / 69%);
+  /* lenier */
+  $linear: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 50.09%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+
+
+
+// screen size
+
+$min-small-screen: 576px;
+$min-medium-screen: 768px;
+$min-large-screen: 992px;
+$min-extra-large-screen: 1200px;
+$min-2extra-large-screen: 1400px;
+
+$max-extra-small-screen: 575px;
+$max-small-screen: 767px;
+$max-medium-screen: 991px;
+$max-large-screen: 1199px;
+$max-extra-large-screen: 1399px;
+
+$numbers: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+$devices: (xs, sm, md, lg, xl, 2xl);

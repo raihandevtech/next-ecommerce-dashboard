@@ -1,0 +1,58 @@
+._card_actions {
+  position: relative;
+  &_btn {
+    @include flex-align(center);
+    padding: 2px 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    ._dote_icon {
+      font-size: 20px;
+      color: $secondary7;
+    }
+  }
+  &_btn._open{
+    background-color: $secondary9;
+  }
+  &_options {
+    background-color: $white;
+    display: none;
+    position: absolute;
+    top: 24px;
+    right: 0;
+    width: 120px;
+    padding: 8px 0;
+    border: 1px solid $primary2;
+    border-radius: 4px;
+  }
+  &_options._open {
+    display: block;
+  }
+  ._options_list {
+    &_item {
+      &_link {
+        font-family: "Open Sans";
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        color: $secondary1;
+        padding: 4px 15px;
+        display: block;
+        &:hover {
+          background-color: $bg1;
+        }
+      }
+    }
+  }
+  ._remove_action {
+    font-family: "Open Sans";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $primary1;
+    padding: 4px 15px;
+    display: block;
+    &:hover {
+      background-color: $bg1;
+    }
+  }
+}

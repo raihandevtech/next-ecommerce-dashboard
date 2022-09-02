@@ -1,0 +1,6 @@
+._page_top{
+    &_wrap{
+        @include flex(center, space-between);
+        margin: 20px;
+    }
+}
